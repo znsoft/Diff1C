@@ -35,6 +35,12 @@
             this.ИмяФайла2 = new System.Windows.Forms.TextBox();
             this.КнопкаНачатьСравнение = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Прогресс = new System.Windows.Forms.ProgressBar();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.СписокИзменений = new System.Windows.Forms.ListView();
             this.ОбъектКонфигурации1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -42,21 +48,15 @@
             this.Разница = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.ДеревоИзменений = new System.Windows.Forms.TreeView();
-            this.Прогресс = new System.Windows.Forms.ProgressBar();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.ДеревоИзменений2 = new System.Windows.Forms.TreeView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -75,7 +75,8 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(203, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Отчет о сравнении конфигураций 1 .txt";
+            this.label2.Text = "Отчет о сравнении конфигураций 2 .txt";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // ИмяФайла1
             // 
@@ -116,6 +117,71 @@
             this.tabControl1.Size = new System.Drawing.Size(467, 577);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 5;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.panel1);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(459, 551);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Старт";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.Прогресс);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.КнопкаНачатьСравнение);
+            this.panel1.Controls.Add(this.ИмяФайла1);
+            this.panel1.Controls.Add(this.ИмяФайла2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(453, 545);
+            this.panel1.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 100);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(449, 444);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(429, 28);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(24, 23);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Открыть";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(429, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(24, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Открыть";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Прогресс
+            // 
+            this.Прогресс.Location = new System.Drawing.Point(4, 78);
+            this.Прогресс.Name = "Прогресс";
+            this.Прогресс.Size = new System.Drawing.Size(446, 16);
+            this.Прогресс.TabIndex = 6;
+            this.Прогресс.Click += new System.EventHandler(this.Прогресс_Click);
             // 
             // tabPage1
             // 
@@ -179,14 +245,6 @@
             this.ДеревоИзменений.Size = new System.Drawing.Size(453, 545);
             this.ДеревоИзменений.TabIndex = 0;
             // 
-            // Прогресс
-            // 
-            this.Прогресс.Location = new System.Drawing.Point(4, 78);
-            this.Прогресс.Name = "Прогресс";
-            this.Прогресс.Size = new System.Drawing.Size(446, 16);
-            this.Прогресс.TabIndex = 6;
-            this.Прогресс.Click += new System.EventHandler(this.Прогресс_Click);
-            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.ДеревоИзменений2);
@@ -207,63 +265,6 @@
             this.ДеревоИзменений2.Size = new System.Drawing.Size(453, 545);
             this.ДеревоИзменений2.TabIndex = 1;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.Прогресс);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.КнопкаНачатьСравнение);
-            this.panel1.Controls.Add(this.ИмяФайла1);
-            this.panel1.Controls.Add(this.ИмяФайла2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(453, 545);
-            this.panel1.TabIndex = 6;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.panel1);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(459, 551);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Старт";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(429, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(24, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Открыть";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(429, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(24, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Открыть";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 100);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(449, 444);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // ФормаВыбораФайлов
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,13 +274,13 @@
             this.Name = "ФормаВыбораФайлов";
             this.Text = "Сравнение отчетов о сравнении конфигураций";
             this.tabControl1.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

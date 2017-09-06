@@ -8,7 +8,7 @@ namespace Consolediff.filetree
     {
         public static string Начало = "Конфигурация";
         public static string Табуляция = "\t";
-//        public static string Измененно = "Изменено:";
+        public static string Порядок = "Порядок объекта изменен";
 //        public static string ТолькоВФайле = "Объект присутствует только в файле:";
     }
 }

@@ -85,5 +85,10 @@ namespace Consolediff
         {
             System.Diagnostics.Process.Start(ИмяФайла2.Text);
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

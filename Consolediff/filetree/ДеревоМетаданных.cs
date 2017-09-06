@@ -73,6 +73,7 @@ namespace Consolediff.filetree
             foreach (var Лист in Подчиненные)
             {
                 Делегат(Лист, Лист.Имя, 1);
+                if (Лист.Имя.Contains(Ключ.Порядок)) continue;
                 var Лист2 = ВетвьДерева2.НайтиПодчиненногоПоИмени(Лист.Имя);
                 if(Лист2!=null)
                 {
